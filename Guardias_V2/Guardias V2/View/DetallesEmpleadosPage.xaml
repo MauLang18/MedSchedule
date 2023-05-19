@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Guardias_V2.View.DetallesEmpleadosPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:sharpnado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1,0">
+                <GradientStop Color="#00d4ff"
+                              Offset="0.1" />
+                <GradientStop Color="#090979"
+                              Offset="0.8" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackLayout Margin="10,0,10,0">
+            <Image Source="flechavolver.png"
+                   HeightRequest="25"
+                   HorizontalOptions="Start"
+                   Margin="10,30,0,0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="{Binding parametrosRecibe.IDENTIFICACION}"
+                   FontSize="50"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   Margin="10"
+                   HorizontalOptions="Center"/>
+            <StackLayout Orientation="Horizontal"
+                         Margin="10"
+                         HorizontalOptions="Center">
+                <Label Text="{Binding parametrosRecibe.NOMBRE}"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center" />
+                <Label Text="{Binding parametrosRecibe.APELLIDO1}"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center" />
+                <Label Text="{Binding parametrosRecibe.APELLIDO2}"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center" />
+            </StackLayout>
+            <Grid Margin="10">
+                <sharpnado:MaterialFrame CornerRadius="15"
+                                         MaterialBlurStyle="Light"
+                                         MaterialTheme="AcrylicBlur" />
+                <StackLayout Orientation="Vertical"
+                             Margin="20,10,20,10"
+                             Spacing="30">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Telefono:"
+                               TextColor="White"
+                               HorizontalOptions="Center" 
+                               FontSize="20"/>
+                        <Label Text="{Binding parametrosRecibe.TELEFONO}"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="White" 
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Correo:"
+                               TextColor="White"
+                               HorizontalOptions="Center" 
+                               FontSize="20"/>
+                        <Label Text="{Binding parametrosRecibe.CORREO}"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="White" 
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Direccion:"
+                               TextColor="White"
+                               HorizontalOptions="Center" 
+                               FontSize="20"/>
+                        <Label Text="{Binding parametrosRecibe.DIRECCION}"
+                               FontSize="15"
+                               FontAttributes="Bold"
+                               TextColor="White" 
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <Frame CornerRadius="30"
+                   Margin="0,20,0,0"
+                   HeightRequest="65"
+                   HasShadow="False"
+                   Padding="0">
+                <Grid ColumnDefinitions="*,*">
+                    <Button Text="Asignar Guardia"
+                            BackgroundColor="#5adf77"
+                            CornerRadius="30"
+                            FontAttributes="Bold"
+                            Margin="-5,0,0,0"
+                            Grid.Column="0"
+                            Command="{Binding AsignarGuardiasCommand}" />
+                    <Button Text="Ver Guardias"
+                            BackgroundColor="RED"
+                            CornerRadius="30"
+                            FontAttributes="Bold"
+                            Margin="0,0,-5,0"
+                            Grid.Column="1"
+                            Command="{Binding ListaGuardiasCommand}" />
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>

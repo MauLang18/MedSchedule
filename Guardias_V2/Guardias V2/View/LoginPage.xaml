@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Guardias_V2.View.LoginPage"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout BackgroundColor="#090979">
+        <Label Text="GUARIDAS"
+               HorizontalOptions="Center"
+               TextColor="Gainsboro"
+               FontSize="30"
+               FontAttributes="Bold"/>
+        <Image Source="registro_en_linea.png"
+               HorizontalOptions="Center"
+               HeightRequest="250"/>
+        <Frame HasShadow="False"
+               VerticalOptions="FillAndExpand"
+               Margin="20"
+               CornerRadius="10">
+            <StackLayout Spacing="20"
+                         VerticalOptions="Center">
+                <Frame HasShadow="False"
+                       HeightRequest="48">
+                    <StackLayout>
+                        <Label Text="Usuario"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                        <Entry x:Name="txtUsuario"
+                               Placeholder="Escribe el nombre de usuario"
+                               PlaceholderColor="Gray"/>
+                    </StackLayout>
+                </Frame>
+                <Frame HasShadow="False"
+                       HeightRequest="48">
+                    <StackLayout>
+                        <Label Text="Contraseña"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="Black"/>
+                        <Entry x:Name="txtContrasena"
+                               Placeholder="Escriba la contraseña"
+                               IsPassword="True"
+                               PlaceholderColor="Gray"/>
+                    </StackLayout>
+                </Frame>
+                <Frame HasShadow="False"
+                       HeightRequest="48">
+                    <StackLayout>
+                        <Button Text="Iniciar Sesión"
+                                BackgroundColor="#00d4ff"
+                                TextColor="Gray"
+                                Command="{Binding IrListaEmpleadosCommand}"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

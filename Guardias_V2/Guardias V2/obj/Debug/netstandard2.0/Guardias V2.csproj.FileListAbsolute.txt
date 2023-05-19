@@ -1,0 +1,21 @@
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\bin\Debug\netstandard2.0\Guardias V2.deps.json
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\bin\Debug\netstandard2.0\Guardias V2.dll
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\bin\Debug\netstandard2.0\Guardias V2.pdb
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\Guardias V2.csproj.AssemblyReference.cache
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\Guardias V2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\View\LoginPage.xaml.g.cs
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\Guardias V2.AssemblyInfoInputs.cache
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\Guardias V2.AssemblyInfo.cs
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\Guardias V2.csproj.CoreCompileInputs.cache
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\Guardias V2.dll
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\refint\Guardias V2.dll
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\Guardias V2.pdb
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\ref\Guardias V2.dll
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\View\ListaEmpleadosPage.xaml.g.cs
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\View\RegistroEmpleadoPage.xaml.g.cs
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\View\DetallesEmpleadosPage.xaml.g.cs
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\View\AsignarGuaridasPage.xaml.g.cs
+C:\Users\mlang\OneDrive\Desktop\Codigos\Guardias V2\Guardias V2\obj\Debug\netstandard2.0\View\ListaGuardiasPage.xaml.g.cs

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Guardias_V2.View.ListaEmpleadosPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows">
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="#F5F6F6">
+        <StackLayout Orientation="Horizontal"
+                     Margin="10">
+            <Image Source="flechavolver.png"
+                   Margin="10">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VolverCommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <Label Text="Empleados"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="#FD8298" />
+        <CollectionView BackgroundColor="#EAEDEC"
+                        Grid.Row="1"
+                        ItemsSource="{Binding Listapokemon}"
+                        x:Name="lista">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical"
+                                 Span="1" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="10,*">
+                        <Frame Grid.Row="1"
+                               WidthRequest="250"
+                               HorizontalOptions="Center"
+                               CornerRadius="15"
+                               HasShadow="False">
+                            <Frame.Background>
+                                <LinearGradientBrush StartPoint="1,0">
+                                    <GradientStop Color="#00d4ff"
+                                                  Offset="0.1" />
+                                    <GradientStop Color="#090979"
+                                                  Offset="0.8" />
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                            <StackLayout>
+                                <Label Text="{Binding PK_TBL_GUA_EMPLEADO}"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding NOMBRE}"
+                                           FontSize="15" />
+                                    <Label Text="{Binding APELLIDO1}"
+                                           FontSize="15" />
+                                    <Label Text="{Binding APELLIDO2}"
+                                           FontSize="15" />
+                                </StackLayout>
+                                <Label Text="{Binding IDENTIFICACION}" />
+                                <Label Text="{Binding TELEFONO}" />
+                                <Label Text="{Binding CORREO}" />
+                                <Label Text="{Binding DIRECCION}" />
+                            </StackLayout>
+                        </Frame>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Path=BindingContext.Iradetallecommand,Source={x:Reference lista}}"
+                                                  CommandParameter="{Binding .}" />
+                        </Grid.GestureRecognizers>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <sh:Shadows CornerRadius="50"
+                    Shades="{sh:SingleShade 
+                Offset='0,10',
+                Opacity=0.5,
+                Color=#F7B811}"
+                    Grid.Row="1">
+            <Button Text="+"
+                    Grid.Row="1"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    CornerRadius="35"
+                    Margin="15"
+                    FontSize="40"
+                    FontAttributes="Bold"
+                    BackgroundColor="#F5CA55"
+                    Command="{Binding Iraregistrocommand}" />
+        </sh:Shadows>
+    </Grid>
+</ContentPage>

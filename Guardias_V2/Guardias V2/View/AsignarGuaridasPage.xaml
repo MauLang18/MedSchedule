@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Guardias_V2.View.AsignarGuaridasPage"
+             NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="#white">
+        <StackLayout Orientation="Horizontal"
+                     Margin="10">
+            <Image Source="flechavolver.png"
+                   Margin="10">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercommand}" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+        <StackLayout Grid.Row="1"
+                     Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre:"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese el nombre"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       PlaceholderColor="Black"
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       Text="{Binding parametrosRecibe.NOMBRE}"
+                       IsReadOnly="True"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Primer Apellido:"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese el apellido"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       PlaceholderColor="Black"
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       Text="{Binding parametrosRecibe.APELLIDO1}" 
+                       IsReadOnly="True"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Identificacion:"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <Entry Placeholder="Ingrese la identificacion"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       PlaceholderColor="Black"
+                       FontSize="20"
+                       HorizontalOptions="Start"
+                       Text="{Binding parametrosRecibe.IDENTIFICACION}"
+                       IsReadOnly="True"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Fecha:"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" />
+                <DatePicker TextColor="Black"
+                            Date="{Binding Fecha, Mode=TwoWay}"
+                            MinimumDate="{Binding FechaActual}">
+                    <DatePicker.Format>dd/MM/yyyy</DatePicker.Format>
+                </DatePicker>
+            </StackLayout>
+            <Grid RowDefinitions="50,*">
+                <Frame Grid.Row="1"
+                       WidthRequest="250"
+                       HorizontalOptions="Center"
+                       CornerRadius="15"
+                       Margin="0,-38,0,0">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="1,0">
+                            <GradientStop Color="#00d4ff"
+                                          Offset="0.1" />
+                            <GradientStop Color="#090979"
+                                          Offset="0.8" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding parametrosRecibe.NOMBRE}"
+                                   FontSize="15" />
+                            <Label Text="{Binding parametrosRecibe.APELLIDO1}"
+                                   FontSize="15" />
+                        </StackLayout>
+                        <Label Text="{Binding parametrosRecibe.IDENTIFICACION}" />
+                        <Label Text="{Binding ResultadoFecha}"
+                               TextColor="Black"
+                               FontAttributes="Bold"
+                               FontSize="20" />
+                    </StackLayout>
+                </Frame>
+            </Grid>
+            <Frame HorizontalOptions="Center"
+                   Padding="6"
+                   Margin="0,30,0,0"
+                   CornerRadius="15"
+                   HasShadow="False"
+                   BackgroundColor="#FFE548">
+                <Button Text="+"
+                        HorizontalOptions="Center"
+                        BackgroundColor="#FFE15D"
+                        BorderColor="#FFF288"
+                        BorderWidth="6"
+                        CornerRadius="15"
+                        FontAttributes="Bold"
+                        FontSize="25"
+                        WidthRequest="60"
+                        HeightRequest="60"
+                        Command="{Binding InsertarCommand}" />
+            </Frame>
+        </StackLayout>
+    </Grid>
+</ContentPage>
